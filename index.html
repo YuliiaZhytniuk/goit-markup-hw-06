@@ -13,26 +13,26 @@
 </head>
 
 <body>
-  <header class="header">
-   <div class="container header-container">
-    <nav class="navigation">
-     <a class="logo studio-logo" href="./index.html">Web<span class="header-logo">Studio</span></a>
-     <ul class="header-menu nav-list">
-        <li><a class="header-menu-link current" href="./index.html">Studio</a></li>
-        <li><a class="header-menu-link" href="">Portfolio</a></li>
-        <li><a class="header-menu-link" href="">Contacts</a></li>
-     </ul>
-    </nav>
-
-    <address class="contacts">
-      <ul class="address-list">
-       <li><a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-       <li><a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+<!--<header class="header">
+    <div class="container header-container">
+     <nav class="navigation">
+      <a class="logo studio-logo" href="./index.html">Web<span class="header-logo">Studio</span></a>
+      <ul class="header-menu nav-list">
+         <li><a class="header-menu-link current" href="./index.html">Studio</a></li>
+         <li><a class="header-menu-link" href="">Portfolio</a></li>
+         <li><a class="header-menu-link" href="">Contacts</a></li>
       </ul>
-    </address>
-  </div>
-</header>
-
+     </nav>
+ 
+     <address class="contacts">
+       <ul class="address-list">
+        <li><a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+       </ul>
+     </address>
+   </div>
+ </header>-->
+  
 <main>
     <section class="section hero">
       <div class="container">
@@ -40,7 +40,6 @@
     <button class="hero-btn" type="button" data-modal-open>Order Service</button>
   </div>
     </section>
-
     <section class="section features">
       <div class="container">
       <h2 class="visually-hidden">>Our Features</h2>
@@ -88,13 +87,15 @@
     </ul>
   </div>
     </section>
-
-    <section class="section team">
+    <!--
+<section class="section team">
       <div class="container">
     <h2 class="team-title">Our Team</h2>
      <ul class="team-cards">
       <li class="team-item" >
-        <img src="./images/mark-guerrero.jpg" alt="mark-guerrero-photo" width="264">
+        
+        <img srcset="./images/team-card1-1.jpg 1x, ./images/team-card1-2.jpg 2x" 
+        src="./images/team-card1-1.jpg" alt="mark-guerrero-photo" width="264">
         <div class="text-item">
           <h3 class="team-item-name">Mark Guerrero</h3>
         <p class="team-item-profession">Product Designer</p> 
@@ -135,7 +136,8 @@
       </li>
 
       <li class="team-item">
-        <img src="./images/tom-ford.jpg" alt="tom-ford-photo" width="264">
+        <img srcset="./images/team-card2-1.jpg 1x, ./images/team-card2-2.jpg 2x" 
+        src="./images/team-card2-1.jpg" alt="tom-ford-photo" width="264">
         <div class="text-item">
           <h3 class="team-item-name">Tom Ford</h3>
         <p class="team-item-profession">Frontend Developer</p>
@@ -176,7 +178,8 @@
       </li>
 
       <li class="team-item">
-        <img src="./images/camila-garcia.jpg" alt="camila-garcia-photo" width="264">
+        <img srcset="./images/team-card3-1.jpg 1x, ./images/team-card3-2.jpg 2x" 
+        src="./images/team-card3-1.jpg" alt="camila-garcia-photo" width="264">
         <div class="text-item">
           <h3 class="team-item-name">Camila Garcia</h3>
         <p class="team-item-profession">Marketing</p>
@@ -217,7 +220,8 @@
       </li>
 
       <li class="team-item">
-        <img src="./images/daniel-wilson.jpg" alt="daniel-wilson-photo" width="264">
+        <img srcset="./images/team-card4-1.jpg 1x, ./images/team-card4-2.jpg 2x" 
+        src="./images/team-card4-1.jpg" alt="daniel-wilson-photo" width="264">
         <div class="text-item">
           <h3 class="team-item-name">Daniel Wilson</h3>
         <p class="team-item-profession">UI Designer</p>
@@ -260,18 +264,23 @@
       </ul>
        
 </div>
-   </section>
-  
-   <section class="section projects">
+   </section>-->
+    
+  <!--<section class="section projects">
     <div class="container">
     <h2 class="projects-title">Our Portfolio</h2>
      <ul class="projects-list">
        <li class="projects-item">
         <div class="projects-cover-wrap">
-        <img class="projects-item-image" 
-        src="./images/img1.jpg" 
+          <picture>
+            <source srcset="./images/project-card-desk1-1.jpg 1x, ./images/project-card-desk1-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab1-1.jpg 1x, ./images/project-card-tab1-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel1-1.jpg 1x, ./images/project-card-tel1-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image" 
+        src="./images/project-card-desk1-1.jpg" 
         alt="Banking app image" 
         width="360"> 
+          </picture>
         <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
       </div>
         <div class="text-projects">
@@ -282,10 +291,15 @@
 
        <li class="projects-item">
          <div class="projects-cover-wrap">
-          <img class="projects-item-image"
-         src="./images/img2.jpg" 
+          <picture>
+            <source srcset="./images/project-card-desk2-1.jpg 1x, ./images/project-card-desk2-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab2-1.jpg 1x, ./images/project-card-tab2-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel2-1.jpg 1x, ./images/project-card-tel2-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image"
+         src="./images/project-card-desk2-1.jpg" 
          alt="Cashless Payment image" 
-         width="360"> 
+         width="360">  
+          </picture>
           <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
         </div>
           <div class="text-projects">
@@ -296,10 +310,15 @@
 
        <li class="projects-item">
          <div class="projects-cover-wrap">
-          <img class="projects-item-image"
-          src="./images/img3.jpg"
+          <picture>
+            <source srcset="./images/project-card-desk3-1.jpg 1x, ./images/project-card-desk3-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab3-1.jpg 1x, ./images/project-card-tab3-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel3-1.jpg 1x, ./images/project-card-tel3-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image"
+          src="./images/project-card-desk3-1.jpg"
            alt="Meditation app image" 
-           width="360">
+           width="360">  
+          </picture>
             <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
           </div>
            <div class="text-projects">
@@ -310,10 +329,15 @@
 
        <li class="projects-item">
         <div class="projects-cover-wrap">
-          <img class="projects-item-image" 
-        src="./images/img4.jpg" 
+          <picture>
+            <source srcset="./images/project-card-desk4-1.jpg 1x, ./images/project-card-desk4-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab4-1.jpg 1x, ./images/project-card-tab4-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel4-1.jpg 1x, ./images/project-card-tel4-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image" 
+        src="./images/project-card-desk4-1.jpg" 
         alt="Taxi service image" 
-        width="360"> 
+        width="360">  
+          </picture>
             <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
           </div>
          <div class="text-projects">
@@ -324,10 +348,15 @@
 
        <li class="projects-item">
         <div class="projects-cover-wrap">
-          <img class="projects-item-image" 
-        src="./images/img5.jpg" 
+          <picture>
+            <source srcset="./images/project-card-desk5-1.jpg 1x, ./images/project-card-desk5-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab5-1.jpg 1x, ./images/project-card-tab5-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel5-1.jpg 1x, ./images/project-card-tel5-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image" 
+        src="./images/project-card-desk5-1.jpg" 
         alt="Screen image" 
-        width="360">  
+        width="360">    
+          </picture>
             <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
           </div>
          <div class="text-projects">
@@ -338,10 +367,15 @@
 
        <li class="projects-item">
         <div class="projects-cover-wrap">
-          <img class="projects-item-image" 
-        src="./images/img6.jpg" 
+          <picture>
+            <source srcset="./images/project-card-desk6-1.jpg 1x, ./images/project-card-desk6-2.jpg 2x" media="(min-width: 1158px)" />
+            <source srcset="./images/project-card-tab6-1.jpg 1x, ./images/project-card-tab6-2.jpg 2x" media="(min-width: 768px)" />
+            <source srcset="./images/project-card-tel6-1.jpg 1x, ./images/project-card-tel6-2.jpg 2x" media="(max-width: 767px)" />
+            <img class="projects-item-image" 
+        src="./images/project-card-desk6-1.jpg" 
         alt="Online Courses image" 
-        width="360">  
+        width="360">    
+          </picture>
             <p class="projects-cover-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App</p>
           </div>
          <div class="text-projects">
@@ -351,10 +385,10 @@
        </li>
       </ul>
      </div>
-   </section>
+   </section>--->
+   
 </main>
-
-<footer class="footer">
+<!--<footer class="footer">
   <div class="container footer-elements">
     <div class="footer-logo-text">
     <a class="logo logo-btn" href="./index.html">Web<span class="footer-logo">Studio</span></a>
@@ -411,9 +445,9 @@
   </form>
 </div>
 </div>
-</footer>
+</footer>-->
 
-<div class="backdrop is-open" data-modal>
+<!--<div class="backdrop is-open" data-modal>
   <div class="modal">
    
       <button type="button" class="modal-close" data-modal-close>
@@ -481,9 +515,10 @@
     <button class="modal-btn" type="submit">Send</button>
   </form>
   </div>
-</div>
+</div>-->
 
-<script src="./js/modal.js"></script>
+<!--<script src="./js/modal.js"></script>-->
+
 
 </body>
 </html>
