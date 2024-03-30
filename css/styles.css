@@ -81,6 +81,159 @@ COMMON
 }
 
 /* ========================================================================================================================================================
+HEADER
+======================================================================================================================================================== */
+.header-menu,
+.contacts {
+  display: none;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 16px;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+}
+
+.header-logo {
+  color: #2e2f42;
+}
+
+.studio-logo {
+  margin-right: 76px;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-close-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.menu-icon-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #2e2f42; 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.menu-icon-button:hover .icon-close,
+.menu-icon-button:focus .icon-close{
+  fill: #fff;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #fcfcfc;
+  width: 100vw;
+  height: 100%;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
+}
+
+.mob-menu-list {
+display: flex;
+flex-direction: column;
+gap: 40px;
+padding-top: 48px;
+margin-bottom: auto;
+}
+
+.mob-menu-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.mob-menu-link {
+color: #404bbf;
+}
+
+.mob-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mob-mail-item{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.mob-tel-item {
+  color: #4d5ae5;
+}
+
+.social-menu-list {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+
+
+
+/* ========================================================================================================================================================
 HERO
 ======================================================================================================================================================== */
 
@@ -168,7 +321,8 @@ HERO
 @media screen and (min-width: 1158px) {
 .hero {
   padding: 188px 0;
-  min-width: 1158px;
+  /* min-width: 1158px; */
+  max-width: 1440px;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
     url(../images/hero-bg-desk1.jpg);
 }
@@ -200,6 +354,10 @@ FEATURES
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
+}
+
+.features-item {
+  width: 100%;
 }
 
 .features-subtitle {
@@ -241,7 +399,6 @@ FEATURES
   .container-features {
     justify-content: space-between;
     gap: 24px;
-    
   }
   
   .features-box {
@@ -274,6 +431,9 @@ FEATURES
 /* ========================================================================================================================================================
 OUR TEAM
 ======================================================================================================================================================== */
+.team .container {
+  width: 296px;
+}
 
 .team {
   background: #f4f4fd;
@@ -296,10 +456,10 @@ OUR TEAM
   gap: 72px;
   align-items: center;
   justify-content: center;
-  
 }
 
 .team-item {
+  width: 100%;
   background-color: #FFFFFF;
   border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -363,6 +523,10 @@ OUR TEAM
 }
 
 @media screen and (min-width: 768px) {
+  .team .container {
+    width: 584px;
+  }
+  
   .team-title {
     margin-bottom: 72px;
   }
@@ -378,6 +542,10 @@ OUR TEAM
 
 
 @media screen and (min-width: 1158px) {
+  .team .container {
+    width: 1158px;
+  }
+  
   .team-cards {
     gap: 24px;
   }
